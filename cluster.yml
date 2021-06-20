@@ -1,0 +1,26 @@
+---
+  # - name: setup pre requisites
+  #   hosts: all
+  #   roles:
+  #     - create-sudo-user
+  #     - install-modules
+  #     - configure-hosts-file
+
+  # - name: setup docker user on the nodes
+  #   become: yes
+  #   become_user: docker
+  #   hosts: admin
+  #   roles:
+  #     - configure-admin
+
+  - name: initialize docker swarm
+    hosts: managers
+    # become: yes
+    roles:
+      - docker-swarm-init
+
+  - name: add workers to the swarm
+    hosts: workers
+    # become: yes
+    roles:
+      - docker-swarm-add-worker

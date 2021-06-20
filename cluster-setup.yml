@@ -1,0 +1,14 @@
+  - name: install docker on pis
+    hosts: nodes-arm
+    become: yes
+    roles:
+      - docker-installation-arm
+
+# Set up user to 
+
+
+  # - name: install docker ubuntu
+  #   hosts: nodes-ubuntu
+  #   become: yes
+  #   roles:
+  #     - docker-installation-ubuntu
