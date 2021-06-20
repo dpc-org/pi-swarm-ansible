@@ -7,8 +7,8 @@
 # Set up user to 
 
 
-  # - name: install docker ubuntu
-  #   hosts: nodes-ubuntu
-  #   become: yes
-  #   roles:
-  #     - docker-installation-ubuntu
+  - name: install docker ubuntu
+    hosts: nodes-ubuntu
+    become: yes
+    roles:
+      - docker-installation-ubuntu
