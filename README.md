@@ -1,4 +1,4 @@
-# swarm-setup
+# pi-swarm-ansible
 
 Docker swarm installation and set up among pi
 Ansible playbook that allow to install docker(+swarm) and set up a cluster on rpi (and non arm arch).
